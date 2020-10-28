@@ -1,7 +1,5 @@
 FROM alpine:3.12
 
-ARG version=11.0.9.11.1
-
 # Please note that the THIRD-PARTY-LICENSE could be out of date if the base image has been updated recently. 
 # The Corretto team will update this file but you may see a few days' delay.
 RUN wget -O /THIRD-PARTY-LICENSES-20200824.tar.gz https://corretto.aws/downloads/resources/licenses/alpine/THIRD-PARTY-LICENSES-20200824.tar.gz && \
@@ -12,7 +10,7 @@ RUN wget -O /THIRD-PARTY-LICENSES-20200824.tar.gz https://corretto.aws/downloads
     SHA_SUM="6cfdf08be09f32ca298e2d5bd4a359ee2b275765c09b56d514624bf831eafb91" && \
     echo "${SHA_SUM}  /etc/apk/keys/amazoncorretto.rsa.pub" | sha256sum -c - && \
     echo "https://apk.corretto.aws" >> /etc/apk/repositories && \
-    apk add --no-cache amazon-corretto-11=$version-r0 && \
+    apk add --no-cache amazon-corretto-11 && \
     JAVA_HOME=/usr/lib/jvm/default-jvm && \
     PATH=$PATH:$JAVA_HOME/bin && \
     jlink --endian little --release-info $JAVA_HOME/release \ 
