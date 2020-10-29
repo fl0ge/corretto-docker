@@ -20,7 +20,7 @@ jdk.naming.rmi,java.compiler,jdk.aot,jdk.internal.vm.compiler,jdk.internal.vm.co
 java.smartcardio,java.sql,java.sql.rowset,java.transaction.xa,java.xml.crypto,jdk.accessibility,jdk.charsets,jdk.crypto.cryptoki,jdk.crypto.ec,\
 jdk.dynalink,jdk.httpserver,jdk.jsobject,jdk.localedata,jdk.naming.dns,jdk.scripting.nashorn,jdk.security.auth,jdk.security.jgss,jdk.xml.dom,jdk.zipfs,\
 jdk.jdwp.agent,jdk.pack,jdk.scripting.nashorn.shell,jdk.jcmd,jdk.jfr" \
-        --compress 2 --no-man-pages --no-header-files --strip-debug --output /temp/java-11-amazon-corretto
+        --no-man-pages --no-header-files --strip-debug --output /temp/java-11-amazon-corretto
 
 
 FROM alpine:3.12
